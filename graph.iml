@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="BuildSystem">
+    <option name="buildSystemId" value="CLOJURE_DEPS" />
+    <option name="displayName" value="graph" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Deps: com.cognitect/transit-java:1.0.371" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.json:0.2.6" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/clojure:1.11.1" level="project" />
+    <orderEntry type="library" name="Deps: cljfx:1.7.24" level="project" />
+    <orderEntry type="library" name="Deps: javax.activation/javax.activation-api:1.2.0" level="project" />
+    <orderEntry type="library" name="Deps: meander/epsilon:0.0.650" level="project" />
+    <orderEntry type="library" name="Deps: cljfx/cljfx$jdk11:1.7.24" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-media:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.specs.alpha:0.2.62" level="project" />
+    <orderEntry type="library" name="Deps: io.replikativ/datalog-parser:0.2.25" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-web$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/spec.alpha:0.3.218" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.cli:1.0.206" level="project" />
+    <orderEntry type="library" name="Deps: tailrecursion/cljs-priority-map:1.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-media$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: io.github.cognitect-labs/test-runner:dfb30d" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-controls:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: thomasa/morpheus:6d7d8c" level="project" />
+    <orderEntry type="library" name="Deps: cljfx/css:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: com.fasterxml.jackson.dataformat/jackson-dataformat-cbor:2.13.3" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-controls$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/google-closure-library:0.0-20151016-61277aea" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/clojurescript:1.7.170" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-graphics$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: aysylu/loom:1.0.2" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.namespace:1.3.0" level="project" />
+    <orderEntry type="library" name="Deps: com.fasterxml.jackson.core/jackson-core:2.14.2" level="project" />
+    <orderEntry type="library" name="Deps: org.ow2.asm/asm:9.4" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-graphics:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: clj-kondo:2023.09.07" level="project" />
+    <orderEntry type="library" name="Deps: clj-tuple:0.2.2" level="project" />
+    <orderEntry type="library" name="Deps: org.mozilla/rhino:1.7R5" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/google-closure-library-third-party:0.0-20151016-61277aea" level="project" />
+    <orderEntry type="library" name="Deps: riddley:0.1.12" level="project" />
+    <orderEntry type="library" name="Deps: org.javassist/javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/java.classpath:1.0.0" level="project" />
+    <orderEntry type="library" name="Deps: org.msgpack/msgpack:0.6.12" level="project" />
+    <orderEntry type="library" name="Deps: borkdude/edamame:1.1.17" level="project" />
+    <orderEntry type="library" name="Deps: com.cognitect/transit-clj:1.0.333" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-base:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-base$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: com.google.javascript/closure-compiler:v20151015" level="project" />
+    <orderEntry type="library" name="Deps: io.github.cljfx/dev:1.0.36" level="project" />
+    <orderEntry type="library" name="Deps: org.babashka/sci.impl.types:0.0.2" level="project" />
+    <orderEntry type="library" name="Deps: cheshire:5.11.0" level="project" />
+    <orderEntry type="library" name="Deps: tigris:0.1.2" level="project" />
+    <orderEntry type="library" name="Deps: com.github.javaparser/javaparser-core:3.25.3" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.reader:1.3.6" level="project" />
+    <orderEntry type="library" name="Deps: org.babashka/sci:0.7.38" level="project" />
+    <orderEntry type="library" name="Deps: potemkin:0.4.5" level="project" />
+    <orderEntry type="library" name="Deps: com.rpl/specter:1.1.4" level="project" />
+    <orderEntry type="library" name="Deps: dorothy:0.0.7" level="project" />
+    <orderEntry type="library" name="Deps: ubergraph:0.8.2" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/test.check:1.1.1" level="project" />
+    <orderEntry type="library" name="Deps: babashka/fs:0.2.16" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.priority-map:0.0.10" level="project" />
+    <orderEntry type="library" name="Deps: org.openjfx/javafx-web:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: borkdude/sci.impl.reflector:0.0.1" level="project" />
+    <orderEntry type="library" name="Deps: nrepl/bencode:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: com.fasterxml.jackson.dataformat/jackson-dataformat-smile:2.13.3" level="project" />
+    <orderEntry type="library" name="Deps: javax.xml.bind/jaxb-api:2.4.0-b180830.0359" level="project" />
+  </component>
+</module>

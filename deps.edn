@@ -1,0 +1,20 @@
+{:paths ["src" "resources"]
+ :deps  {org.clojure/clojure {:mvn/version "1.11.1"}
+         ubergraph/ubergraph {:mvn/version "0.8.2"}
+         meander/epsilon     {:mvn/version "0.0.650"}
+         cljfx/cljfx {:mvn/version "1.7.24"}
+         io.github.cljfx/dev {:mvn/version "1.0.36"}
+         thomasa/morpheus    {:git/url "https://github.com/benedekfazekas/morpheus.git"
+                              :git/sha "6d7d8ccc1dd58ef2d4d9c781486303cf1082b899"}}
+ :aliases
+ {:run-m {:main-opts ["-m" "aeonik.graph"]}
+  :run-x {:ns-default aeonik.graph
+          :exec-fn greet
+          :exec-args {:name "Clojure"}}
+  :build {:deps {io.github.clojure/tools.build
+                 {:git/tag "v0.9.5" :git/sha "24f2894"}}
+          :ns-default build}
+  :test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
+                      io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd"}}} :neil {:project {:name graph/graph}}}}
