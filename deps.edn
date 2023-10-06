@@ -1,11 +1,44 @@
 {:paths ["src" "resources"]
- :deps  {org.clojure/clojure {:mvn/version "1.11.1"}
-         ubergraph/ubergraph {:mvn/version "0.8.2"}
-         meander/epsilon     {:mvn/version "0.0.650"}
-         cljfx/cljfx {:mvn/version "1.7.24"}
-         io.github.cljfx/dev {:mvn/version "1.0.36"}
-         thomasa/morpheus    {:git/url "https://github.com/benedekfazekas/morpheus.git"
-                              :git/sha "6d7d8ccc1dd58ef2d4d9c781486303cf1082b899"}}
+ :deps  {org.clojure/clojure              {:mvn/version "1.11.1"}
+         ubergraph/ubergraph              {:mvn/version "0.8.2"}
+         meander/epsilon                  {:mvn/version "0.0.650"}
+
+         cljfx/cljfx                      {:mvn/version "1.7.24"}
+         io.github.humbleui/humbleui      {:git/sha "472bb1e15275af7d32c4057c799f304ef9b6a6fe"}
+         com.phronemophobic/membrane      {:mvn/version "0.11.1.1-beta"}
+         io.github.nextjournal/clerk      {:mvn/version "0.15.957"}
+
+         io.github.cljfx/dev              {:mvn/version "1.0.36"}
+         com.github.hervegirod/fxsvgimage {:mvn/version "1.1"}
+
+         net.clojars.john/injest          {:mvn/version "0.1.0-beta.8"}
+         net.cgrand/xforms                {:mvn/version "0.19.4"}
+         criterium/criterium              {:mvn/version "0.4.6"}
+
+         quil/quil                        {:local/root "/home/dave/Projects/clojure/quil-4.3-RC0.jar"}
+         thi.ng/geom {:mvn/version "1.0.0"}
+         org.jogamp.gluegen/gluegen-rt {:mvn/version "2.5.0"}
+         org.jogamp.gluegen/gluegen-rt$natives-linux-amd64 {:mvn/version "2.5.0"}
+         org.jogamp.jogl/jogl-all {:mvn/version "2.5.0"}
+         org.jogamp.jogl/jogl-all$natives-linux-amd64 {:mvn/version "2.5.0"}
+         org.jogamp.jogl/jogl {:mvn/version "2.5.0"}
+         org.jogamp.jogl/jogl$natives-linux-amd64 {:mvn/version "2.5.0"}
+
+         #_#_org.jogamp.gluegen/gluegen-rt {:mvn/version "2.4.0-rc-20230201"}
+         #_#_org.jogamp.gluegen/gluegen-rt$natives-linux-amd64 {:mvn/version "2.4.0-rc-20230201"}
+         #_#_org.jogamp.jogl/jogl-all {:mvn/version "2.4.0-rc-20230201"}
+         #_#_org.jogamp.jogl/jogl-all$natives-linux-amd64 {:mvn/version "2.4.0-rc-20230201"}
+         #_#_org.jogamp.jogl/jogl-all$natives-macosx-universal {:mvn/version "2.4.0-rc-20230201"}
+         #_#_org.jogamp.gluegen/gluegen-rt$natives-linux-amd64 {:mvn/version "2.3.2"}
+         #_#_org.jogamp.gluegen/gluegen-rt {:mvn/version "2.3.2"}
+         #_#_org.jogamp.jogl/jogl-all {:mvn/version "2.3.2"}
+         #_#_org.jogamp.jogl/jogl-all$natives-linux-amd64 {:mvn/version "2.3.2"}
+
+         thomasa/morpheus                 {:git/url "https://github.com/benedekfazekas/morpheus.git"
+                                           :git/sha "6d7d8ccc1dd58ef2d4d9c781486303cf1082b899"}}
+ :mvn/repos
+ {"jitpack" {:url "https://jitpack.io"}
+  "jogl"    {:url "https://jogamp.org/deployment/maven/"}}
  :aliases
  {:run-m {:main-opts ["-m" "aeonik.graph"]}
   :run-x {:ns-default aeonik.graph

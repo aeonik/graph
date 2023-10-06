@@ -7,6 +7,8 @@
 (def main 'aeonik.graph)
 (def class-dir "target/classes")
 
+(def basis (b/create-basis {}))
+
 (defn test "Run all the tests." [opts]
   (let [basis    (b/create-basis {:aliases [:test]})
         cmds     (b/java-command
@@ -25,6 +27,25 @@
          :class-dir class-dir
          :src-dirs ["src"]
          :ns-compile [main]))
+
+
+;; Location of native libs: "~/.m2/repository/org/jogamp/jogl/jogl-all/2.3.2/jogl-all-2.3.2-" classifier ".jar"
+(defn extract-native-libs []
+  (let [basis (b/create-basis {})
+        jar-path (-> basis
+                     :libs
+                     (get 'org.jogamp.gluegen/gluegen-rt$natives-linux-amd64)
+                     :paths
+                     first)
+        jar-path2 (-> basis
+                     :libs
+                     (get 'org.jogamp.jogl/jogl-all$natives-linux-amd64)
+                     :paths
+                     first)
+        dest-dir "natives"]
+    (b/delete {:path dest-dir})
+    (b/unzip {:zip-file jar-path2 :target-dir dest-dir})
+    (b/unzip {:zip-file jar-path :target-dir dest-dir})))
 
 (defn ci "Run the CI pipeline of tests (and build the uberjar)." [opts]
   (test opts)

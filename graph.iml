@@ -14,66 +14,159 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Deps: com.cognitect/transit-java:1.0.371" level="project" />
-    <orderEntry type="library" name="Deps: org.clojure/data.json:0.2.6" level="project" />
+    <orderEntry type="library" name="Deps: com.pngencoder/pngencoder:0.13.1" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.json:2.4.0" level="project" />
+    <orderEntry type="library" name="Deps: org.lz4/lz4-java:1.8.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/clojure:1.11.1" level="project" />
     <orderEntry type="library" name="Deps: cljfx:1.7.24" level="project" />
+    <orderEntry type="library" name="Deps: net.cgrand/xforms:0.19.4" level="project" />
     <orderEntry type="library" name="Deps: javax.activation/javax.activation-api:1.2.0" level="project" />
+    <orderEntry type="library" name="Deps: com.ibm.icu/icu4j:70.1" level="project" />
+    <orderEntry type="library" name="Deps: commons-codec:1.15" level="project" />
+    <orderEntry type="library" name="Deps: weavejester/dependency:0.2.1" level="project" />
     <orderEntry type="library" name="Deps: meander/epsilon:0.0.650" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.analyzer:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: criterium:0.4.6" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/skija-shared:0.116.1" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.gluegen/gluegen-rt$natives-linux-amd64:2.5.0" level="project" />
     <orderEntry type="library" name="Deps: cljfx/cljfx$jdk11:1.7.24" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-media:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: cljs-log:0.2.2" level="project" />
+    <orderEntry type="library" name="Deps: io.github.nextjournal/clerk:0.15.957" level="project" />
+    <orderEntry type="library" name="Deps: com.google.errorprone/error_prone_annotations:2.5.1" level="project" />
+    <orderEntry type="library" name="Deps: org.apache.commons/commons-lang3:3.11" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.logging:1.1.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/core.specs.alpha:0.2.62" level="project" />
+    <orderEntry type="library" name="Deps: org.tukaani/xz:1.9" level="project" />
     <orderEntry type="library" name="Deps: io.replikativ/datalog-parser:0.2.25" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-web$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: insn:0.5.2" level="project" />
+    <orderEntry type="library" name="Deps: org.graalvm.js/js:21.3.2.1" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/skija-windows-x64:0.116.1" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/spec.alpha:0.3.218" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.cli:1.0.206" level="project" />
     <orderEntry type="library" name="Deps: tailrecursion/cljs-priority-map:1.2.1" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-media$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: com.taoensso/encore:3.23.0" level="project" />
+    <orderEntry type="library" name="Deps: mvxcvi/multiformats:0.3.107" level="project" />
     <orderEntry type="library" name="Deps: io.github.cognitect-labs/test-runner:dfb30d" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/humbleui:472bb1" level="project" />
+    <orderEntry type="library" name="Deps: org.graalvm.regex/regex:21.3.2.1" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-controls:19.0.2.1" level="project" />
     <orderEntry type="library" name="Deps: thomasa/morpheus:6d7d8c" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.analyzer.jvm:1.2.0" level="project" />
+    <orderEntry type="library" name="Deps: com.phronemophobic/membrane:0.11.1.1-beta" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/xerror:0.1.0" level="project" />
+    <orderEntry type="library" name="Deps: appliedscience/js-interop:0.2.6-MOVED" level="project" />
     <orderEntry type="library" name="Deps: cljfx/css:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/skija-linux-x64:0.116.1" level="project" />
+    <orderEntry type="library" name="Deps: techascent/tech.resource:5.04" level="project" />
+    <orderEntry type="library" name="Deps: org.apache.commons/commons-math3:3.6.1" level="project" />
     <orderEntry type="library" name="Deps: com.fasterxml.jackson.dataformat/jackson-dataformat-cbor:2.13.3" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-controls$linux:19.0.2.1" level="project" />
     <orderEntry type="library" name="Deps: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
-    <orderEntry type="library" name="Deps: org.clojure/google-closure-library:0.0-20151016-61277aea" level="project" />
-    <orderEntry type="library" name="Deps: org.clojure/clojurescript:1.7.170" level="project" />
+    <orderEntry type="library" name="Deps: org.iq80.snappy/snappy:0.4" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/google-closure-library:0.0-20211011-0726fdeb" level="project" />
+    <orderEntry type="library" name="Deps: it.unimi.dsi/fastutil:8.2.1" level="project" />
+    <orderEntry type="library" name="Deps: net.clojars.john/injest:0.1.0-beta.8" level="project" />
+    <orderEntry type="library" name="Deps: org.graalvm.sdk/graal-sdk:21.3.2.1" level="project" />
+    <orderEntry type="library" name="Deps: rewrite-clj:1.1.45" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/clojurescript:1.11.60" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-graphics$linux:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.flatland/ordered:1.15.11" level="project" />
+    <orderEntry type="library" name="Deps: io.github.nextjournal/markdown:0.5.144" level="project" />
     <orderEntry type="library" name="Deps: aysylu/loom:1.0.2" level="project" />
+    <orderEntry type="library" name="Deps: com.google.guava/listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.namespace:1.3.0" level="project" />
+    <orderEntry type="library" name="Deps: cnuernber/dtype-next:8.041" level="project" />
+    <orderEntry type="library" name="Deps: com.nextjournal/beholder:1.0.2" level="project" />
     <orderEntry type="library" name="Deps: com.fasterxml.jackson.core/jackson-core:2.14.2" level="project" />
     <orderEntry type="library" name="Deps: org.ow2.asm/asm:9.4" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.jogl/jogl$natives-linux-amd64:2.5.0" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-graphics:19.0.2.1" level="project" />
+    <orderEntry type="library" name="Deps: org.xerial.larray/larray-buffer:0.4.1" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/jwm:0.4.14" level="project" />
+    <orderEntry type="library" name="Deps: org.xerial.larray/larray-mmap:0.4.1" level="project" />
     <orderEntry type="library" name="Deps: clj-kondo:2023.09.07" level="project" />
+    <orderEntry type="library" name="Deps: com.github.hervegirod/fxsvgimage:1.1" level="project" />
+    <orderEntry type="library" name="Deps: io.methvin/directory-watcher:0.17.3" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.jogl/jogl-all:2.5.0" level="project" />
     <orderEntry type="library" name="Deps: clj-tuple:0.2.2" level="project" />
-    <orderEntry type="library" name="Deps: org.mozilla/rhino:1.7R5" level="project" />
-    <orderEntry type="library" name="Deps: org.clojure/google-closure-library-third-party:0.0-20151016-61277aea" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/skija-macos-x64:0.116.1" level="project" />
+    <orderEntry type="library" name="Deps: pl.edu.icm/JLargeArrays:1.5" level="project" />
+    <orderEntry type="library" name="Deps: com.taoensso/truss:1.6.0" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.jogl/jogl:2.5.0" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/types$clojure:0.2.0" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/google-closure-library-third-party:0.0-20211011-0726fdeb" level="project" />
+    <orderEntry type="library" name="Deps: hiccup:2.0.0-alpha2" level="project" />
     <orderEntry type="library" name="Deps: riddley:0.1.12" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/ndarray:0.3.3" level="project" />
+    <orderEntry type="library" name="Deps: org.apache.commons/commons-text:1.9" level="project" />
     <orderEntry type="library" name="Deps: org.javassist/javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Deps: mvxcvi/alphabase:2.1.1" level="project" />
+    <orderEntry type="library" name="Deps: org.roaringbitmap/shims:0.9.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/java.classpath:1.0.0" level="project" />
+    <orderEntry type="library" name="Deps: com.phronemophobic/cljs-cache:0.1.8" level="project" />
+    <orderEntry type="library" name="Deps: com.github.wendykierp/JTransforms:3.1" level="project" />
+    <orderEntry type="library" name="Deps: com.google.guava/failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Deps: environ:1.0.0" level="project" />
+    <orderEntry type="library" name="Deps: com.google.guava/guava:30.1.1-jre" level="project" />
+    <orderEntry type="library" name="Deps: applied-science/js-interop:0.3.3" level="project" />
+    <orderEntry type="library" name="Deps: org.graalvm.truffle/truffle-api:21.3.2.1" level="project" />
+    <orderEntry type="library" name="Deps: net.cgrand/macrovich:0.2.1" level="project" />
     <orderEntry type="library" name="Deps: org.msgpack/msgpack:0.6.12" level="project" />
     <orderEntry type="library" name="Deps: borkdude/edamame:1.1.17" level="project" />
+    <orderEntry type="library" name="Deps: com.google.j2objc/j2objc-annotations:1.3" level="project" />
+    <orderEntry type="library" name="Deps: com.postspectacular/dependency:0.1.2" level="project" />
     <orderEntry type="library" name="Deps: com.cognitect/transit-clj:1.0.333" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/geom:1.0.0" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/strf:0.2.3" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-base:19.0.2.1" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-base$linux:19.0.2.1" level="project" />
-    <orderEntry type="library" name="Deps: com.google.javascript/closure-compiler:v20151015" level="project" />
     <orderEntry type="library" name="Deps: io.github.cljfx/dev:1.0.36" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/math:0.3.1" level="project" />
     <orderEntry type="library" name="Deps: org.babashka/sci.impl.types:0.0.2" level="project" />
+    <orderEntry type="library" name="Deps: org.checkerframework/checker-qual:3.8.0" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/shadergraph:0.3.1" level="project" />
+    <orderEntry type="library" name="Deps: net.n01se/clojure-jna:1.0.0" level="project" />
+    <orderEntry type="library" name="Deps: net.java.dev.jna/jna:5.12.1" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/typedarrays:0.1.7" level="project" />
     <orderEntry type="library" name="Deps: cheshire:5.11.0" level="project" />
+    <orderEntry type="library" name="Deps: com.phronemophobic/cljs-priority-map:1.2.4" level="project" />
     <orderEntry type="library" name="Deps: tigris:0.1.2" level="project" />
     <orderEntry type="library" name="Deps: com.github.javaparser/javaparser-core:3.25.3" level="project" />
+    <orderEntry type="library" name="Deps: babashka/process:0.4.16" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.reader:1.3.6" level="project" />
+    <orderEntry type="library" name="Deps: io.github.humbleui/skija-macos-arm64:0.116.1" level="project" />
     <orderEntry type="library" name="Deps: org.babashka/sci:0.7.38" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/dstruct:0.2.2" level="project" />
+    <orderEntry type="library" name="Deps: com.taoensso/nippy:3.2.0" level="project" />
     <orderEntry type="library" name="Deps: potemkin:0.4.5" level="project" />
+    <orderEntry type="library" name="Deps: thi.ng/color:1.5.0" level="project" />
     <orderEntry type="library" name="Deps: com.rpl/specter:1.1.4" level="project" />
+    <orderEntry type="library" name="Deps: org.slf4j/slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Deps: dorothy:0.0.7" level="project" />
+    <orderEntry type="library" name="Deps: com.google.javascript/closure-compiler-unshaded:v20220502" level="project" />
     <orderEntry type="library" name="Deps: ubergraph:0.8.2" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/test.check:1.1.1" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.gluegen/gluegen-rt:2.5.0" level="project" />
     <orderEntry type="library" name="Deps: babashka/fs:0.2.16" level="project" />
-    <orderEntry type="library" name="Deps: org.clojure/data.priority-map:0.0.10" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.memoize:1.0.236" level="project" />
+    <orderEntry type="library" name="Deps: antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Deps: camel-snake-kebab:0.4.2" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.priority-map:1.1.0" level="project" />
     <orderEntry type="library" name="Deps: org.openjfx/javafx-web:19.0.2.1" level="project" />
     <orderEntry type="library" name="Deps: borkdude/sci.impl.reflector:0.0.1" level="project" />
     <orderEntry type="library" name="Deps: nrepl/bencode:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: org.jogamp.jogl/jogl-all$natives-linux-amd64:2.5.0" level="project" />
+    <orderEntry type="library" name="Deps: Local quil (quil-4.3-RC0.jar)" level="project" />
+    <orderEntry type="library" name="Deps: com.google.code.findbugs/jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.cache:1.0.225" level="project" />
+    <orderEntry type="library" name="Deps: org.roaringbitmap/RoaringBitmap:0.9.0" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.async:1.4.627" level="project" />
     <orderEntry type="library" name="Deps: com.fasterxml.jackson.dataformat/jackson-dataformat-smile:2.13.3" level="project" />
+    <orderEntry type="library" name="Deps: juji/editscript:0.6.2" level="project" />
     <orderEntry type="library" name="Deps: javax.xml.bind/jaxb-api:2.4.0-b180830.0359" level="project" />
+    <orderEntry type="library" name="Deps: http-kit:2.6.0" level="project" />
   </component>
 </module>
