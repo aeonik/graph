@@ -27,7 +27,6 @@
                                                               (m/guard (not= nil ?to)))
                                              :as       ?var-rest})}
 
-
             [?from ?to ?var-rest]))
 
 (defn generate-multigraph [paths]
