@@ -128,99 +128,114 @@
 
     (defn lift-name-up [input]
       (m/find input
-              {:name ?name}
-              ?name))
+        {:name ?name}
+        ?name))
 
     (def namespace-defs (:namespace-definitions (:analysis (analysis paths))))
     (def var-defs (:var-definitions (:analysis (analysis paths))))
     (def namespace-usages (:namespace-usages (:analysis (analysis paths))))
 
-    [{:name     ->evdev,
-      :from-var -main}
-     {:name     ->joydev,
-      :from-var -main},
-     {:name     defn
-      :from-var nil}]
+    (comment
+      [{:name     ->evdev,
+        :from-var -main}
+       {:name     ->joydev,
+        :from-var -main},
+       {:name     defn
+        :from-var nil}])
+
     ;; Basic meander search
     (m/search namespace-defs
-              [{:name ?name}] ?name)
+      [{:name ?name}] ?name)
 
     ;; Joining with meander? Scan works, not sure about the join logic
     (m/search (:analysis (analysis paths))
 
-              {:namespace-definitions (m/scan {:name ?name})
-               :var-definitions       (m/scan {:name ?var-name})}
+      {:namespace-definitions (m/scan {:name ?name})
+       :var-definitions       (m/scan {:name ?var-name})}
 
-              {:name     ?name
-               :var-name ?var-name})
+      {:name     ?name
+       :var-name ?var-name})
 
     ;; Trying to keep the rest of the metadata
     (m/search namespace-defs
-              [{:name ?name :as ?metadata}]
+      [{:name ?name :as ?metadata}]
 
-              [?name (dissoc ?metadata :name)])
+      [?name (dissoc ?metadata :name)])
 
     ;; Use this one for now
     (m/search (:analysis (analysis paths))
-              {:namespace-definitions (m/scan {:name ?name :as ?rest})
-               :namespace-usages      (m/scan {:from ?name, :to ?to})}
+      {:namespace-definitions (m/scan {:name ?name :as ?rest})
+       :namespace-usages      (m/scan {:from ?name, :to ?to})}
 
-              [?name ?rest ?to])
+      [?name ?rest ?to])
 
     ;; Same as above but for vars, can't seem to get it to work because of nils, macros, etc...
     (m/search (:analysis (analysis paths))
-              {:var-definitions (m/scan {:name ?name :as ?rest})
-               :var-usages      (m/scan {:from-var ?from :name ?to :as ?var-rest})}
+      {:var-definitions (m/scan {:name ?name :as ?rest})
+       :var-usages      (m/scan {:from-var ?from :name ?to :as ?var-rest})}
 
-              [?from ?to ?var-rest])
+      [?from ?to ?var-rest])
 
     ;; Works!!!
     (m/search (:analysis (analysis paths))
-              {:var-usages (m/scan {:from-var ?from
-                                    :name     ?to
-                                    &         (m/and (m/guard (not= nil ?from))
-                                                     (m/guard (not= nil ?to)))
-                                    :as       ?var-rest})}
+      {:var-usages (m/scan {:from-var ?from
+                            :name     ?to
+                            &         (m/and (m/guard (not= nil ?from))
+                                             (m/guard (not= nil ?to)))
+                            :as       ?var-rest})}
 
 
-              [?from ?to ?var-rest])
+      [?from ?to ?var-rest])
 
     (m/search clj-kondo-analysis
-              {:var-usages (m/scan {:from-var ?from :name ?to})}
+      {:var-usages (m/scan {:from-var ?from :name ?to})}
 
-              [?from ?to])
+      [?from ?to])
 
 
 
     ;; Trying with rewrites and memory variables
     (m/rewrites namespace-defs
-                [{:name !name :as !rest}]
-                [!name !rest])
+      [{:name !name :as !rest}]
+      [!name !rest])
 
 
 
     ;; Trying with vars
     (m/rewrites var-defs
-                [{:name !name :as !metadata} ...]
+      [{:name !name :as !metadata} ...]
 
-                [[!name !metadata] ...])
+      [[!name !metadata] ...])
 
     ;; Dissoc name from metadata
     (m/rewrites var-defs
-                [{:name !name :as !metadata} ...]
-                [[!name !metadata] ...])
+      [{:name !name :as !metadata} ...]
+      [[!name !metadata] ...])
 
     (m/rewrites (:analysis (analysis paths))
-                {:var-usages [{:name !name :to !to :from-var !from} ...]
-                 &           (m/and (m/guard (not= nil !name))
-                                    (m/guard (not= nil !to))
-                                    (m/guard (not (m/re "clojure.core/.*" !to))))}
+      {:var-usages [{:name !name :to !to :from-var !from} ...]
+       &           (m/and (m/guard (not= nil !name))
+                          (m/guard (not= nil !to))
+                          (m/guard (not (m/re "clojure.core/.*" !to))))}
 
-                [[!name !from !to] ...])
+      [[!name !from !to] ...])
 
     (lift-name-up (:namespace-definitions (:analysis (analysis paths))))
 
-    (def nodes (map :name ({:keys [:namespace-definitions :namespace-usages]} (analysis paths))))
+
+    (map :name (-> (analysis paths)
+                   :analysis
+                   :namespace-definitions))
+
+    (-> (analysis paths)
+        :analysis
+        :namespace-usages)
+
+    (comment (def nodes (map :name ({:keys [:namespace-definitions :namespace-usages]} (:analysis (analysis paths))))))
+
+    (def nodes (map :name (-> (analysis paths)
+                   :analysis
+                   :namespace-definitions)))
     (def edges (map (juxt :from :to) namespace-usages))
     (def multigraph (apply uber/multidigraph
                            (var-usages (analysis paths))))
@@ -233,7 +248,6 @@
     (take 2 (:node-map multigraph))
     (map :out-degree (:node-map multigraph))
     (uber/nodes multigraph)
-    (uber/traverse multigraph)
     (loom/pre-traverse multigraph)
 
     (-> (d/digraph [[:a :b :c] [:b :c]])
@@ -244,18 +258,15 @@
         d/dot
         #_(dj/render {:format :svg }))
     (-> multigraph
-         uber-to-dorothy
-         d/dot
-         #_(dj/render {:format :svg}))
+        uber-to-dorothy
+        d/dot
+        #_(dj/render {:format :svg}))
     (-> multigraph
         uber/edges)
 
-    ()
-
-
     (uber/viz-graph multigraph
                     {:save
-                     {:filename (str "./" (LocalDateTime/now) "-uber-graph.svg")
+                     {:filename (str "./output/" (LocalDateTime/now) "-uber-graph.svg")
                       :format   :svg}
                      :rankdir "TB"
                      :nodesep "1.0"
