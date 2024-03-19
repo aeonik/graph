@@ -70,13 +70,16 @@
                                                                                            :filename filename})
                                                                                         files)}}
                                                           ]}
-                                              {:fx/type    :image-view
-                                               :image      image
-                                               :smooth true
-                                               :fit-height 1800
-                                               :fit-width  1800
-                                               :preserve-ratio  true
-                                               }]}]}}})
+                                              {:fx/type :scroll-pane
+                                               :fit-to-width true
+                                               :content
+                                               {:fx/type    :image-view
+                                                :image      image
+                                                :smooth true
+                                                :fit-height 1800
+                                                :fit-width  1800
+                                                :preserve-ratio  true
+                                                }}]}]}}})
 
 (def renderer
   (fx/create-renderer
