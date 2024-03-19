@@ -102,6 +102,7 @@
     (str "digraph {\n"
          (clojure.string/join "\n" edges)
          "\n}")))
+
 (defn save-graph-svg-to-byte-array [graph]
   #_(-> graph
       uber-to-dorothy
@@ -116,14 +117,13 @@
 #_(comment
     (def paths ["/home/dave/Projects/joystick_fixer/src/aeonik/joystick_fixer/core.clj"])
     (take 2 (analysis paths))
-    (keys analysis)
-    (keys (:analysis analysis))
-    (:namespace-definitions (:analysis analysis))
-    (:namespace-usages (:analysis analysis))
-    (:var-definitions (:analysis analysis))
+    (keys (analysis paths))
+    (keys (:analysis (analysis paths)))
+    (:namespace-definitions (:analysis (analysis paths)))
+    (:namespace-usages (:analysis(analysis paths)))
 
-    (take 1 (nthnext (:analysis analysis) 2))
-    (->> :var-definitions (:analysis analysis)
+    (take 1 (nthnext (:analysis(analysis paths)) 2))
+    (->> :var-definitions (:analysis (analysis paths))
          :from-var)
 
     (defn lift-name-up [input]
@@ -131,8 +131,9 @@
               {:name ?name}
               ?name))
 
-    (def namespace-defs (:namespace-definitions (:analysis analysis)))
-    (def var-defs (:var-definitions (:analysis analysis)))
+    (def namespace-defs (:namespace-definitions (:analysis (analysis paths))))
+    (def var-defs (:var-definitions (:analysis (analysis paths))))
+    (def namespace-usages (:namespace-usages (:analysis (analysis paths))))
 
     [{:name     ->evdev,
       :from-var -main}
@@ -145,7 +146,7 @@
               [{:name ?name}] ?name)
 
     ;; Joining with meander? Scan works, not sure about the join logic
-    (m/search (:analysis analysis)
+    (m/search (:analysis (analysis paths))
 
               {:namespace-definitions (m/scan {:name ?name})
                :var-definitions       (m/scan {:name ?var-name})}
@@ -160,21 +161,21 @@
               [?name (dissoc ?metadata :name)])
 
     ;; Use this one for now
-    (m/search (:analysis analysis)
+    (m/search (:analysis (analysis paths))
               {:namespace-definitions (m/scan {:name ?name :as ?rest})
                :namespace-usages      (m/scan {:from ?name, :to ?to})}
 
               [?name ?rest ?to])
 
     ;; Same as above but for vars, can't seem to get it to work because of nils, macros, etc...
-    (m/search (:analysis analysis)
+    (m/search (:analysis (analysis paths))
               {:var-definitions (m/scan {:name ?name :as ?rest})
                :var-usages      (m/scan {:from-var ?from :name ?to :as ?var-rest})}
 
               [?from ?to ?var-rest])
 
     ;; Works!!!
-    (m/search (:analysis analysis)
+    (m/search (:analysis (analysis paths))
               {:var-usages (m/scan {:from-var ?from
                                     :name     ?to
                                     &         (m/and (m/guard (not= nil ?from))
@@ -209,7 +210,7 @@
                 [{:name !name :as !metadata} ...]
                 [[!name !metadata] ...])
 
-    (m/rewrites (:analysis analysis)
+    (m/rewrites (:analysis (analysis paths))
                 {:var-usages [{:name !name :to !to :from-var !from} ...]
                  &           (m/and (m/guard (not= nil !name))
                                     (m/guard (not= nil !to))
@@ -217,9 +218,9 @@
 
                 [[!name !from !to] ...])
 
-    (lift-name-up (:namespace-definitions (:analysis analysis)))
+    (lift-name-up (:namespace-definitions (:analysis (analysis paths))))
 
-    (def nodes (map :name ({:keys [:namespace-definitions :namespace-usages]} analysis)))
+    (def nodes (map :name ({:keys [:namespace-definitions :namespace-usages]} (analysis paths))))
     (def edges (map (juxt :from :to) namespace-usages))
     (def multigraph (apply uber/multidigraph
                            (var-usages (analysis paths))))
