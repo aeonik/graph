@@ -1,0 +1,18 @@
+#+title: Todo
+
+* TODO Refactor cljfx messages per vlaaad:
+~/Projects/clojure/graph/src/aeonik/gui/events.clj
+#+begin_quote
+What I do now is I use vars, and event maps look like this:
+#+end_quote
+#+begin_src clojure
+:on-key-pressed {:fn #'do-stuff}
+#+end_src
+#+begin_quote
+so map event handler looks as simple as:
+#+end_quote
+#+begin_src clojure
+:fx.opt/map-event-handler #(swap! state (:fn %) %)
+#+end_src
+
+Link to example: https://github.com/cljfx/dev/blob/main/src/cljfx/dev/ui.clj#L116
