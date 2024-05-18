@@ -23,11 +23,11 @@
   "Handle the event when the user presses enter in the directory input field"
   (let [keycode (.getCode key-press)]
     (when (= KeyCode/ENTER keycode)
-      (let [source           (.getSource fx-event)
+      (let [source           (.getSource key-press)
             text-field-value (.getText source)]
         (do
           (swap! *state assoc :current-dir text-field-value)
-          (swap! *state assoc :files (util/list-clojure-files text-field-value))))))))
+          (swap! *state assoc :files (util/list-clojure-files text-field-value)))))))
 
 (defmulti event-handler :event/type)
 
