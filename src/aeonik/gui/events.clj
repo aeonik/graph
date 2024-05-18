@@ -18,6 +18,17 @@
          :selection   [(first (util/list-clojure-files (fs/cwd)))]
          :graph       nil}))
 
+(defn- set-current-dir
+  [{:keys [key-press ^KeyEvent fx/event]}]
+  "Handle the event when the user presses enter in the directory input field"
+  (let [keycode (.getCode key-press)]
+    (when (= KeyCode/ENTER keycode)
+      (let [source           (.getSource fx-event)
+            text-field-value (.getText source)]
+        (do
+          (swap! *state assoc :current-dir text-field-value)
+          (swap! *state assoc :files (util/list-clojure-files text-field-value))))))))
+
 (defmulti event-handler :event/type)
 
 (defmethod event-handler :default [event]
