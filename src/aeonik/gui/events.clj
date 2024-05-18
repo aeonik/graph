@@ -11,7 +11,7 @@
            [javafx.scene.input KeyCode KeyEvent]))
 
 (def *state
-  (atom {:title       "App title"
+  (atom {:title       "Graph Application"
          :current-dir (fs/cwd)
          :image       (util/str-path->jfx-image (io/resource "2023-09-25T20:43:10.072745733-uber-graph.png"))
          :files       (util/list-clojure-files (fs/cwd))
@@ -55,6 +55,7 @@
 
 (defmethod event-handler ::display-files [{:keys [current-dir]}]
   (swap! *state assoc :files (util/list-clojure-files current-dir)))
+
 (defmethod event-handler ::update-selected-files [event]
   (let [{selection :fx/event} event
         graph (graph/generate-multigraph selection)
