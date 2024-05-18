@@ -1,14 +1,16 @@
-# aeonik/aeonik
+# aeonik/graph
 
 FIXME: my new application.
 
 ## Installation
 
-Download from https://github.com/graph/graph
+Download from https://github.com/aeonik/graph
 
 ## Usage
 
-FIXME: explanation
+Graph your Clojure dependencies.
+
+Still a work in progress.
 
 Run the project directly, via `:exec-fn`:
 
@@ -20,10 +22,10 @@ Run the project, overriding the name to be greeted:
     $ clojure -X:run-x :name '"Someone"'
     Hello, Someone!
 
-Run the project directly, via `:main-opts` (`-m aeonik.aeonik`):
+Run the project directly, via `:main-opts` (`-m aeonik.graph`):
 
-    $ clojure -M:run-m
-    Hello, World!
+    $ clojure -M -m aeonik.graph src/aeonik/graph.clj
+    Picture is in outputs folder
 
 Run the project, overriding the name to be greeted:
 

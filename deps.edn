@@ -1,6 +1,9 @@
 {:paths ["src" "resources"]
  :deps  {org.clojure/clojure              {:mvn/version "1.11.1"}
-         ubergraph/ubergraph              {:mvn/version "0.8.2"}
+         #_#_ubergraph/ubergraph              {:mvn/version "0.8.2"}
+         #_#_ubergraph/ubergraph              {:local/root "/Users/davidconnett/github/ubergraph"}
+         ubergraph/ubergraph              {:git/url "https://github.com/aeonik/ubergraph.git"
+                                           :sha     "8abd3c9f3a5e4925375895b38fa274742f41b097"}
          meander/epsilon                  {:mvn/version "0.0.650"}
 
          cljfx/cljfx                      {:mvn/version "1.7.24"}
@@ -15,7 +18,8 @@
          net.cgrand/xforms                {:mvn/version "0.19.4"}
          criterium/criterium              {:mvn/version "0.4.6"}
 
-         quil/quil                        {:local/root "/home/dave/Projects/clojure/quil-4.3-RC0.jar"}
+
+         #_#_quil/quil                        {:local/root "/home/dave/Projects/clojure/quil-4.3-RC0.jar"}
          thi.ng/geom {:mvn/version "1.0.0"}
          org.jogamp.gluegen/gluegen-rt {:mvn/version "2.5.0"}
          org.jogamp.gluegen/gluegen-rt$natives-linux-amd64 {:mvn/version "2.5.0"}
