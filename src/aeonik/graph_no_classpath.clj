@@ -41,7 +41,7 @@
                       :format   :png}
                      :rankdir     "TB"
                      :nodesep     "1.0"
-                     :ranksep     "3.0
+                     :ranksep     "3.0"
                      :splines     "polyline"
                      :dir         "forward"
                      :concentrate "true"

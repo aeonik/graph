@@ -1,0 +1,112 @@
+#+title: Readme
+* aeonik/graph
+
+This is a project that I use to test out various graphing capabilities in Clojure, covering both senses of the word "graph" – as in charting and nodes.
+
+It is designed to graph PNG or SVG files within a GUI using tools like Ubergraph, Meander, and Dotviz. The project is organized with some files in the root directory and others within subdirectories, reflecting different aspects of the project's functionality.
+
+** src Directory Structure
+
+*** Overview
+
+*** Root Files
+   - [[file:src/aeonik/graph.clj][graph.clj]]: Intended to become a CLI utility to load up the project and execute graphing tasks. This file will eventually serve as the entry point for command-line operations.
+   - [[file:src/aeonik/graph_no_classpath.clj][graph_no_classpath.clj]]: Contains most of the main logic for the project. This file is where the core functionality resides, handling the selection and processing of files for graphing.
+   - [[file:src/aeonik/meander_transforms.clj][meander_transforms.clj]]: Handles transformations using the Meander library. These transformations likely pertain to manipulating data structures or graphs before visualization.
+   - [[file:src/aeonik/notebooks.clj][notebooks.clj]]: A file related to running or managing Clojure notebooks. It may be used to test or demonstrate functionalities interactively.
+   - [[file:src/aeonik/old_graph.clj][old_graph.clj]]: An older version of the graphing logic, kept for reference or potential reuse. This file might contain deprecated methods or previous approaches to graphing.
+   - [[file:src/aeonik/util.clj][util.clj]]: Utility functions that support various operations within the project. These functions are likely used across different files and modules.
+
+*** gui Folder
+   - [[file:src/aeonik/gui/dynamic_gui.clj][dynamic_gui.clj]]: Contains code for generating dynamic user interfaces. This file might be responsible for creating interactive elements in the GUI.
+   - [[file:src/aeonik/gui/events.clj][events.clj]]: Manages event handling within the GUI. This file is likely responsible for responding to user interactions, such as clicks or keyboard inputs.
+   - [[file:src/aeonik/gui/main.clj][main.clj]]: The main entry point for the GUI. This file initializes and runs the graphical user interface, coordinating the various components.
+   - [[file:src/aeonik/gui/subs.clj][subs.clj]]: Handles subscriptions or reactive data flow within the GUI. This file might be used for managing state and ensuring the GUI updates correctly when the underlying data changes.
+
+*** humble_ui Folder
+   - [[file:src/aeonik/humble_ui][humble_ui]]: Placeholder for integrating Humble UI, though it seems empty or not yet developed. This folder suggests an intention to experiment with or migrate to Humble UI in the future.
+
+*** membrane Folder
+   - [[file:src/aeonik/membrane/main.clj][main.clj]]: Contains experimental code for rendering graphs using Membrane. This file might be part of an exploration into alternative ways of visualizing data within the project.
+
+*** notebooks Folder
+   - [[file:src/aeonik/notebooks/main.clj][main.clj]]: Manages or runs notebook-related functionalities. This file could be used to demonstrate project features or run experiments in an interactive notebook environment.
+
+*** quil Folder
+   - [[file:src/aeonik/quil/learning.clj][learning.clj]]: Contains tutorial or learning materials related to Quil, a Clojure library for creative coding. This file might involve experiments with GPU-based graph rendering.
+
+*** thing Folder
+   - [[file:src/aeonik/thing/tutorial.clj][tutorial.clj]]: Experimental code for live rendering using GPU visualization of graphs. This file is currently focused on tutorial content, exploring different visualization techniques.
+
+* Installation
+
+Download from [[https://github.com/aeonik/graph][GitHub repository]].
+
+* Usage
+
+Graph your Clojure dependencies.
+
+Still a work in progress.
+
+** Run the project directly, via ~:exec-fn~:
+
+#+BEGIN_SRC sh
+  $ clj -M:run-m
+Usage:   -r, --regex REGEX       clojure.core/.*|:clj-kondo/unknown-namespace/.*  Regex pattern to exclude
+  -n, --node-remove NODE  nil                                              Node to remove from the graph
+#+END_SRC
+
+#+RESULTS:
+
+
+** Run the project directly, via ~:main-opts~ (~-m aeonik.graph~):
+
+#+BEGIN_SRC sh
+  $ clj -M -m aeonik.gui.main
+  # Gui should run
+#+END_SRC
+
+
+** Run the project's tests:
+
+#+BEGIN_SRC sh
+  $ clojure -T:build test
+#+END_SRC
+
+** Run the project's CI pipeline and build an uberjar:
+
+#+BEGIN_SRC sh
+  $ clojure -T:build ci
+#+END_SRC
+
+This will produce an updated ~pom.xml~ file with synchronized dependencies inside the ~META-INF~ directory inside ~target/classes~ and the uberjar in ~target~. You can update the version (and SCM tag) information in the generated ~pom.xml~ by updating ~build.clj~.
+
+If you don't want the ~pom.xml~ file in your project, you can remove it. The ~ci~ task will still generate a minimal ~pom.xml~ as part of the ~uber~ task, unless you remove ~version~ from ~build.clj~.
+
+** Run that uberjar:
+
+#+BEGIN_SRC sh
+  $ java -jar target/net.clojars.aeonik/aeonik-0.1.0-SNAPSHOT.jar
+#+END_SRC
+
+* Options
+
+FIXME: Listing of options this app accepts.
+
+* Examples
+
+...
+
+* Bugs
+
+...
+
+* Any Other Sections
+** That You Think
+** Might be Useful
+
+* License
+
+Copyright © 2023 Dave
+
+Distributed under the Eclipse Public License version 1.0.
