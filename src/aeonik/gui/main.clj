@@ -2,7 +2,7 @@
   (:require [cljfx.api :as fx]
             [cljfx.ext.list-view :as fx.ext.list-view]
             [clojure.java.io :as io]
-            [aeonik.gui.events :as events :refer [event-handler *state]]
+            [aeonik.gui.events :as events :refer [event-handler set-current-dir *state]]
             [aeonik.util :as util]
             [babashka.fs :as fs])
   (:import (java.io InputStream)
@@ -76,8 +76,6 @@
                                                {:fx/type    :image-view
                                                 :image      image
                                                 :smooth true
-                                                :fit-height 1800
-                                                :fit-width  1800
                                                 :preserve-ratio  true
                                                 }}]}]}}})
 
